@@ -1,4 +1,4 @@
-module github.com/vSterlin/images/backend
+module github.com/vSterlin/jwt-auth
 
 go 1.15
 

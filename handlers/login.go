@@ -7,7 +7,7 @@ import (
 
 	"github.com/dgrijalva/jwt-go"
 
-	"github.com/vSterlin/images/backend/data"
+	"github.com/vSterlin/jwt-auth/data"
 )
 
 type credentials struct {

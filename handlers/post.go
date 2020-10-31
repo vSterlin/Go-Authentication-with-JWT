@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/vSterlin/images/backend/data"
+	"github.com/vSterlin/jwt-auth/data"
 )
 
 type Some struct {

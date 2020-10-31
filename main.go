@@ -3,8 +3,8 @@ package main
 import (
 	"net/http"
 
-	"github.com/vSterlin/images/backend/cors"
-	"github.com/vSterlin/images/backend/handlers"
+	"github.com/vSterlin/jwt-auth/cors"
+	"github.com/vSterlin/jwt-auth/handlers"
 
 	"github.com/gorilla/mux"
 )
