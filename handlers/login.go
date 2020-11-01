@@ -15,9 +15,9 @@ type credentials struct {
 	Password string `json:"password"`
 }
 
-type res struct {
-	Token string `json:"token"`
-}
+// type res struct {
+// 	Token string `json:"token"`
+// }
 
 func LoginHandler(w http.ResponseWriter, r *http.Request) {
 	var creds credentials
@@ -39,8 +39,13 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Errorf("Signing went wrong")
 	}
-	response := &res{
-		Token: t,
+	c := http.Cookie{
+		Name:  "token",
+		Value: t,
 	}
-	data.ToJSON(response, w)
+	http.SetCookie(w, &c)
+	// response := &res{
+	// 	Token: t,
+	// }
+	data.ToJSON("Successfully returned set cookie", w)
 }
